@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гончарная мастерская Крути&Лепи</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylek.css">
+    <script src="script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="photo/logo1.png" alt="Логотип Крути и Лепи">
+            </div>
+            <div class="title">
+                <h1>КРУТИ&ЛЕПИ</h1>
+                <p>Гончарная мастерская</p>
+            </div>
+            <nav class="socials">
+                <div>
+                    <a href="https://vk.com/kruti.lepi?from=search" target="_blank"><img src="photo/vk_logo.png" alt="ВКонтакте"></a>
+                    <a href="#"><img src="photo/telegram_logo.png" alt="Telegram"></a>
+                </div>
+            </nav>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#about">Главная</a></li>
+                <li><a href="#gallery">Студия</a></li>
+                <li><a href="#classes">Мастер-классы</a></li>
+                <li><a href="#product">Товары</a></li>
+                <li><a href="#gallery-section">Галерея</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="block">
+        <div class="about-content">
+            <h2>О нас</h2>
+            <p>Добро пожаловать в мастерскую "Крути&Лепи" — место, где каждый может создать что-то удивительное своими руками. Мы учим искусству гончарного дела и создаем атмосферу тепла и вдохновения.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="block">
+        <h2>Наша студия</h2>
+        <div class="gallery-container">
+            <button class="arrow left-arrow" id="prev_btn">&#9664;</button>
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <div class="photo"><img src="photo/studio.jpg" alt="Фотография 1"></div>
+                    <div class="photo"><img src="photo/studio3.jpg" alt="Фотография 2"></div>
+                    <div class="photo"><img src="photo/studio2.jpg" alt="Фотография 3"></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="photo"><img src="photo/photo2.jpg" alt="Фотография 4"></div>
+                    <div class="photo"><img src="photo/photo3.jpg" alt="Фотография 5"></div>
+                    <div class="photo"><img src="photo/studio.jpg" alt="Фотография 6"></div>
+                </div>
+            </div>
+            <button class="arrow right-arrow" id="next_btn">&#9654;</button>
+        </div>
+    </section>
+
+    <section id="classes" class="block">
+        <h2>Мастер-классы</h2>
+        <div class="clas-container">
+            <div class="class-item">
+                <div id="item-one" class="photo1"><img src="photo/logo.jpg"></div>
+                <h3>Основа</h3>
+                <p>Создание изделия несложной формы, лепка и гончарный круг, 
+                    1,5ч творчества, 1 обжиг (изделием можно пользоваться только в декоративных целях)</p>
+                    <a id="one" href="#" class="button-sign">Записаться</a>
+            </div>
+            <div id="item-two" class="class-item">
+                <div class="photo1"><img src="photo/logo.jpg"></div>
+                <h3>Сейчас покрутим</h3>
+                <p>Создание изделий более сложных и интересных форм, лепка 
+                    и гончарный круг, 1ч45 творчества, роспись красками и покрытие 
+                    глазурью (изделием можно пользоваться в быту)</p>
+                    <a id="two" href="#" class="button-sign">Записаться</a>
+            </div>
+            <div id="item-tree" class="class-item">
+                <div class="photo1"><img src="photo/logo.jpg"></div>
+                <h3>Чашка мечты</h3>
+                <p>Создание чашки с персональным дизайном, лепка и гончарный круг, 
+                    1ч20 творчества, роспись красками и покрытие глазурью, обжиг</p>
+                    <a id="tree" href="#" class="button-sign">Записаться</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="product" class="block">
+        <h2>Товары</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <div class="photo2"><img src="photo/logo.jpg"></div>
+                <h3>Вазы</h3>
+                <p>Познакомьтесь с основами работы с глиной.</p>
+                <a href="#" class="button-prod">Подробнее</a>
+            </div>
+            <div class="product-item">
+                <div class="photo2"><img src="photo/logo.jpg"></div>
+                <h3>Подсвечники</h3>
+                <p>Творчество для маленьких рук.</p>
+                <a href="#" class="button-prod">Подробнее</a>
+            </div>
+            <div class="product-item">
+                <div class="photo2"><img src="photo/logo.jpg"></div>
+                <h3>Посуда</h3>
+                <p>Персональный подход и создание уникальных изделий.</p>
+                <button class="button-prod">Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <h2>Запись на мастер-класс</h2>
+          
+          <form id="bookingForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="phone">Телефон:</label>
+            <input type="number" id="number" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="date">Выберите дату:</label>
+            <input type="date" id="date" name="date" required>
+    
+            <button type="submit" class="button-sign">Отправить</button>
+
+          </form>
+        </div>
+    </div>
+
+    <section id="gallery-section" class="block-g">
+        <h2 class="gallery-title">Галерея</h2>
+        <div class="gallery-grid">
+            <img src="photo/Галерея.jpg" alt="Керамическая чашка">
+            <img src="photo/Галерея1.jpg" alt="Глиняный горшок">
+            <img src="photo/пост5(1).png" alt="Тарелки ручной работы">
+            <img src="photo/Галерея2.jpg" alt="Тарелка ручной работы">
+            <img src="photo/Галерея3.jpg" alt="Керамическая ваза">
+            <img src="photo/Галерея6.jpg" alt="Керамический чайник">
+            <img src="photo/Галерея5.jpg" alt="Тарелки ручной работы">
+            <img src="photo/Галерея4(1).png" alt="Тарелки ручной работы">
+            <img src="photo/Галерея7.jpg" alt="Тарелки ручной работы">
+            <img src="photo/Галерея8.jpg" alt="Тарелки ручной работы">
+        </div>
+    </section>
+    
+
+    <section class="gift-block">
+        <div class="gift-content">
+            <h2>Подарите близким новые впечатления!</h2>
+            <p>
+                Создание керамики – занятие не из простых, но стоит попробовать только раз и вы не захотите останавливаться.
+                Именно по этой причине, подарок в виде сертификата на посещение студии будет отличным решением. Мы предлагаем
+                различные мастер-классы, на которых можно узнать о разных техниках и тонкостях создания керамики.
+            </p>
+            <p>
+                Сертификат можно получить в физическом или электронном виде. Такой подарок подойдет и детям, и взрослым, ведь
+                проявить свои творческие способности хочется в любом возрасте.
+            </p>
+            <button class="gift-button">Выбрать сертификат в подарок</button>
+        </div>
+        <div class="gift-images">
+            <img src="photo/for-sertif.jpg" class="image-large" alt="Люди создают керамику">
+            <img src="photo/for-sertif3.jpg"class="image-small" alt="Гончарные руки">
+            <img src="photo/for-sertif2(1).png" class="image-medium" alt="Керамическая студия">
+        </div>
+    </section>    
+    
+    <section id="contact" class="block">
+        <h2>Контакты</h2>
+        <p>Варшавское шоссе, 9с1</p>
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <div id="map"></div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 КРУТИ&ЛЕПИ. Все права защищены.</p>
+    </footer>
+</body>
+</html>
